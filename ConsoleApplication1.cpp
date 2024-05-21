@@ -66,10 +66,11 @@ std::string dataTypeToString(DataType type) {
 int main() {
     // Declare symbol table as a temporary variable
     SymbolTable symbolTable;
-
+    int myCSOPESYGrade = 100;
+  
     // Store a variable in the symbol table
     std::cout << "Symbol table as a temporary variable\n" << std::endl;
-    symbolTable.store("myCSOPESYGrade", 100, DataType::INT);
+    symbolTable.store("myCSOPESYGrade", myCSOPESYGrade, DataType::INT);
 
     // Print the symbol table
     symbolTable.print();
@@ -80,7 +81,7 @@ int main() {
     std::unique_ptr<SymbolTable> symbolTablePtr = std::make_unique<SymbolTable>();
    
     // Store a variable in the symbol table
-    symbolTablePtr->store("myCSOPESYGrade", 100, DataType::INT);
+    symbolTablePtr->store("myCSOPESYGrade", myCSOPESYGrade, DataType::INT);
 
     // Print the symbol table
     symbolTablePtr->print();
